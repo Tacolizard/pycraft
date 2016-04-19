@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+from tkinter import *
+
+conf = open('launchconf.json','r').read()
+print(conf)
+root = Tk()
+
+menubar = Menu(root)
+
+e = Entry(root)
+fovl = Label(root, text='Set FOV:')
+fovl.pack()
+e.pack()
+
+e.delete(0, END)
+e.insert(0, "65")
+
+def getvals():
+    fov = e.get()
+    root.quit
+
+save = Button(root,text='Save and Exit',command=getvals)
+save.pack()
+
+
+root.minsize(width=200,height=150)
+root.resizable(width=FALSE,height=FALSE)
+root.wm_title('Pycraft Configurator')
+#root.config(menu=menubar)
+
+
+root.mainloop()
+print(e.get())
+
+
+def launch():
+    pass
