@@ -186,7 +186,7 @@ class Window(pyglet.window.Window):
         glViewport(0, 0, width, height)
         glMatrixMode(GL_PROJECTION)
         glLoadIdentity()
-        gluPerspective(65.0, width / float(height), 0.1, 60.0)
+        gluPerspective(90.0, width / float(height), 0.1, 60.0)
         glMatrixMode(GL_MODELVIEW)
         glLoadIdentity()
         x, y = self.player.rotation
